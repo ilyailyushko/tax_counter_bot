@@ -34,11 +34,12 @@ def fix_sum(message):
         if total_sum_after_tax < original_sum:
             total_sum = total_sum + 1
             total_sum_after_tax = (total_sum - (total_sum / 100 * original_tax))
-        msg = 'Надо выставить счет на 👉', str(total_sum), "₽"
-        msg += 'Сумма налога 👉', str("%.2f" % (total_sum - total_sum_after_tax)), "₽"
-        msg += 'После уплаты налогов останется 👉', str(total_sum_after_tax), "₽"
+        msg = 'Надо выставить счет на 👉' + str(total_sum) + "₽"
+        msg = msg + 'Сумма налога 👉' + str("%.2f" % (total_sum - total_sum_after_tax)) + "₽"
+        msg = msg + 'После уплаты налогов останется 👉' + str(total_sum_after_tax) + "₽"
         bot.send_message(message.chat.id, msg, total_sum)
     except Exception as e:
         bot.reply_to(message, 'Это не число или что то пошло не так...')
+
 
 bot.polling()
