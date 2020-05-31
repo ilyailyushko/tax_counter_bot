@@ -1,6 +1,6 @@
 import telebot
 
-bot = telebot.TeleBot("1217064730:AAECUm0tyh9z9SEz3i1y3BNKN7aN2dd_TuM")
+bot = telebot.TeleBot("1042220865:AAEu5nqqFTVtMwv_pi-9_vtPIb_UrmSkYj0")
 original_sum = ''
 original_tax = ''
 welcome_msg = "Если надо выставить счет юр лицу 👉 /6" + '\n\n' + "А если физ лицу 👉 /4"
