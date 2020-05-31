@@ -41,6 +41,8 @@ def fix_sum(message):
 
         bot.send_message(message.chat.id, ok)
         bot.send_message(message.chat.id, msg)
+        bot.send_message(message.chat.id, "Посчитаем еще раз?" + '\n\n' + welcome_msg)
+
     except Exception as e:
         bot.reply_to(message, '🤷‍♂️🔡 Это не число или что то пошло не так...' + '\n\n' + 'Давай начнем сначала' + '\n\n' +welcome_msg)
 
